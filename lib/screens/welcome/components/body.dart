@@ -5,6 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:walid_flutter/components/roundedbutton.dart';
 // ignore: unused_import
 import 'package:walid_flutter/constants.dart';
+import 'package:walid_flutter/screens/Login/login.dart';
+import 'package:walid_flutter/screens/Signin/sign.dart';
 import 'package:walid_flutter/screens/welcome/components/background.dart';
 
 
@@ -20,27 +22,38 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     // ignore: prefer_const_constructors
-    return Background(child: Column(
-      mainAxisAlignment:MainAxisAlignment.center,
-      // ignore: prefer_const_literals_to_create_immutables
-      children: [
-        // ignore: prefer_const_constructors
-        Text(
-          "Welcome",
-        // ignore: prefer_const_constructors
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),
-        ),
-        SizedBox(height:size.height *0.052),
-        SvgPicture.asset(
-          "assets/icons/chat.svg",
-          height: size.height * 0.4,
-        ),
-        // ignore: deprecated_member_use, duplicate_ignore
-        SizedBox(height:size.height *0.052),
-        RoundedButton(text: "LOGIN",press: (){},),
-        RoundedButton(text: "SIGN IN",press: (){},color: kprimarylightColor,textColor: Colors.black,),
-        
-      ],
-    ),);
+    return Background(
+      child: SingleChildScrollView(
+        child: Column(
+        mainAxisAlignment:MainAxisAlignment.center,
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          // ignore: prefer_const_constructors
+          Text(
+            "Welcome",
+          // ignore: prefer_const_constructors
+          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),
+          ),
+          SizedBox(height:size.height *0.052),
+          SvgPicture.asset(
+            "assets/icons/chat.svg",
+            height: size.height * 0.4,
+          ),
+          // ignore: deprecated_member_use, duplicate_ignore
+          SizedBox(height:size.height *0.052),
+          RoundedButton(text: "LOGIN",press: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return LoginScreen();
+            }),);
+          },),
+          RoundedButton(text: "SIGN IN",press: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return SignScreen();
+            }),);
+          },color: kprimarylightColor,textColor: Colors.black,),
+          
+        ],
+          ),
+      ),);
   }
 }
