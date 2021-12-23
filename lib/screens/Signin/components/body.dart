@@ -41,7 +41,7 @@ Widget build(BuildContext context) {
         "Sign Up",
         
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
-        SizedBox(height: size.height*0.04,),
+        SizedBox(height: size.height*0.02,),
         SvgPicture.asset(
           "assets/icons/signup.svg",
           width: size.width * 0.8,
@@ -65,6 +65,7 @@ Widget build(BuildContext context) {
               return LoginScreen();
             }),);
           },color: kprimaryColor,textColor: Colors.white,),
+          SizedBox(height: size.height *0.01,),
         HaveanAcc(press: (){
           Navigator.push(context, MaterialPageRoute(builder: (context){ return LoginScreen();}));
         },login: false),
@@ -72,14 +73,38 @@ Widget build(BuildContext context) {
          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                padding:EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                  shape:BoxShape.circle,
-                  ),
-                  child: SvgPicture.asset("assets/icons/facebook.svg",height: 20,width: 20,),
-                  ),
+              Row(
+                children: [
+                  Container(
+                    padding:EdgeInsets.all(15),
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                      shape:BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset("assets/icons/facebook.svg",height: 15,width: 15,),
+                      ),
+                       Container(
+                    padding:EdgeInsets.all(15),
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                      shape:BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset("assets/icons/google-plus.svg",height: 15,width: 15,),
+                      ),
+                       Container(
+                    padding:EdgeInsets.all(15),
+                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                      shape:BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset("assets/icons/twitter.svg",height: 15,width: 15,),
+                      ),
+                      
+                ],
+              ),
             ],
           )
         ],

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:walid_flutter/components/roundedbutton.dart';
@@ -38,7 +40,7 @@ Widget build(BuildContext context) {
         
         // ignore: prefer_const_constructors
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
-        SizedBox(height: size.height*0.04,),
+      
         SvgPicture.asset(
           "assets/icons/login.svg",
           width: size.width * 0.8,
