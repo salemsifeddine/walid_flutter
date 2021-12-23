@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable, sized_box_for_whitespace, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -67,8 +67,23 @@ Widget build(BuildContext context) {
           },color: kprimaryColor,textColor: Colors.white,),
         HaveanAcc(press: (){
           Navigator.push(context, MaterialPageRoute(builder: (context){ return LoginScreen();}));
-        },login: false)
+        },login: false),
+         Ordevider(),
+         Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding:EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  border: Border.all(),
+                  shape:BoxShape.circle,
+                  ),
+                  child: SvgPicture.asset("assets/icons/facebook.svg",height: 20,width: 20,),
+                  ),
+            ],
+          )
         ],
+       
       )
     );
   }
@@ -78,12 +93,36 @@ Widget build(BuildContext context) {
 
 class Ordevider extends StatelessWidget {
  
-  Size size= MediaQuery.of(context).size;
+
 
   @override
   Widget build(BuildContext context) {
+    Size size= MediaQuery.of(context).size;
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 5),
       width: size.width * 0.8,
+      child: Row(
+        
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          BuildDivider(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Text("OR",style: TextStyle(fontWeight: FontWeight.w600),),
+          ),
+          BuildDivider(),
+          
+
+        ],
+        
+      ),
     );
+  }
+
+  Expanded BuildDivider() {
+    return Expanded(child: Divider(
+          color: Color(0xFFD9D9D9),
+          height: 2.5,
+        ),);
   }
 }
