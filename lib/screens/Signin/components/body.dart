@@ -31,84 +31,111 @@ Widget build(BuildContext context) {
    
     return Backgroud(
    
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        // ignore: prefer_const_literals_to_create_immutables
-        children: [
-
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+      
+            
+            Text(
+          "Sign Up",
           
-          Text(
-        "Sign Up",
-        
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
-        SizedBox(height: size.height*0.02,),
-        SvgPicture.asset(
-          "assets/icons/signup.svg",
-          width: size.width * 0.8,
-          height: size.height * 0.35,
-          ),
-         
-          RoundedInput(
-            hintText: "Enter Your Email",
-            icon: Icons.person,
-            // ignore: avoid_print
-            onChanged: (value){print(value);}
-          ),
-          
-           RoundedPassword(
-            onChanged: (value){
+          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
+          SizedBox(height: size.height*0.02,),
+          SvgPicture.asset(
+            "assets/icons/signup.svg",
+            width: size.width * 0.8,
+            height: size.height * 0.35,
+            ),
+           
+            RoundedInput(
+              hintText: "First Name",
+              icon: Icons.person,
               // ignore: avoid_print
-              print("salem");
-            },),
-            RoundedButton(text: "LOGIN",press: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context){
-              return LoginScreen();
-            }),);
-          },color: kprimaryColor,textColor: Colors.white,),
-          SizedBox(height: size.height *0.01,),
-        HaveanAcc(press: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context){ return LoginScreen();}));
-        },login: false),
-         Ordevider(),
-         Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding:EdgeInsets.all(15),
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                      shape:BoxShape.circle,
-                      ),
-                      child: SvgPicture.asset("assets/icons/facebook.svg",height: 15,width: 15,),
-                      ),
-                       Container(
-                    padding:EdgeInsets.all(15),
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                      shape:BoxShape.circle,
-                      ),
-                      child: SvgPicture.asset("assets/icons/google-plus.svg",height: 15,width: 15,),
-                      ),
-                       Container(
-                    padding:EdgeInsets.all(15),
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    decoration: BoxDecoration(
-                      border: Border.all(),
-                      shape:BoxShape.circle,
-                      ),
-                      child: SvgPicture.asset("assets/icons/twitter.svg",height: 15,width: 15,),
-                      ),
-                      
-                ],
-              ),
-            ],
-          )
-        ],
-       
+              onChanged: (value){print(value);}
+            ),
+            RoundedInput(
+              hintText: "Second Name",
+              icon: Icons.person,
+              // ignore: avoid_print
+              onChanged: (value){print(value);}
+            ),
+             
+             RoundedInput(
+              hintText: "Phone Number",
+              icon: Icons.phone,
+              // ignore: avoid_print
+              onChanged: (value){print(value);}
+            ),
+             RoundedInput(
+              hintText: "Date of birth/place",
+              icon: Icons.place,
+              // ignore: avoid_print
+              onChanged: (value){print(value);}
+            ),
+             RoundedInput(
+              hintText: "UserName",
+              icon: Icons.person,
+              // ignore: avoid_print
+              onChanged: (value){print(value);}
+            ),
+            
+             RoundedPassword(
+              onChanged: (value){
+                // ignore: avoid_print
+                print("salem");
+              },),
+              RoundedButton(text: "LOGIN",press: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return LoginScreen();
+              }),);
+            },color: kprimaryColor,textColor: Colors.white,),
+            SizedBox(height: size.height *0.01,),
+          HaveanAcc(press: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context){ return LoginScreen();}));
+          },login: false),
+           Ordevider(),
+           Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding:EdgeInsets.all(15),
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        shape:BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset("assets/icons/facebook.svg",height: 15,width: 15,),
+                        ),
+                         Container(
+                      padding:EdgeInsets.all(15),
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        shape:BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset("assets/icons/google-plus.svg",height: 15,width: 15,),
+                        ),
+                         Container(
+                      padding:EdgeInsets.all(15),
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        shape:BoxShape.circle,
+                        ),
+                        child: SvgPicture.asset("assets/icons/twitter.svg",height: 15,width: 15,),
+                        ),
+                        
+                  ],
+                ),
+              ],
+            )
+          ],
+         
+        ),
       )
     );
   }
