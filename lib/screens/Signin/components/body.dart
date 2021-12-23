@@ -37,7 +37,7 @@ Widget build(BuildContext context) {
 
           
           Text(
-        "LOGIN",
+        "Sign in",
         
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
         SvgPicture.asset(

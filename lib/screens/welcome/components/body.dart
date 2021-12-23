@@ -52,26 +52,7 @@ class Body extends StatelessWidget {
               return SignScreen();
             }),);
           },color: kprimarylightColor,textColor: Colors.black,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // ignore: prefer_const_constructors
-              Text(
-                "Don't have an Account?",
-                // ignore: prefer_const_constructors
-              style: TextStyle(fontSize: 14),),
-              
-              GestureDetector(
-                // ignore: avoid_print
-                onTap: (){print("salemsss");},
-                // ignore: prefer_const_constructors
-                child: Text(
-                  "Sign Up",
-                // ignore: prefer_const_constructors
-                style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,
-                color: kprimaryColor)))
-            ],
-          )
+         
         ],
           ),
       ),);
