@@ -6,6 +6,7 @@ import 'package:walid_flutter/components/roundedbutton.dart';
 // ignore: unused_import
 import 'package:walid_flutter/constants.dart';
 import 'package:walid_flutter/screens/Login/login.dart';
+// ignore: unused_import
 import 'package:walid_flutter/screens/Signin/sign.dart';
 import 'package:walid_flutter/screens/welcome/components/background.dart';
 
@@ -51,7 +52,26 @@ class Body extends StatelessWidget {
               return SignScreen();
             }),);
           },color: kprimarylightColor,textColor: Colors.black,),
-          
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // ignore: prefer_const_constructors
+              Text(
+                "Don't have an Account?",
+                // ignore: prefer_const_constructors
+              style: TextStyle(fontSize: 14),),
+              
+              GestureDetector(
+                // ignore: avoid_print
+                onTap: (){print("salemsss");},
+                // ignore: prefer_const_constructors
+                child: Text(
+                  "Sign Up",
+                // ignore: prefer_const_constructors
+                style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,
+                color: kprimaryColor)))
+            ],
+          )
         ],
           ),
       ),);

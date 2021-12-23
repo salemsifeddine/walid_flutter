@@ -1,20 +1,20 @@
-// ignore: file_names
-// ignore: file_names
-// ignore: file_names
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:walid_flutter/components/roundedbutton.dart';
 import 'package:walid_flutter/components/roundedinput.dart';
 import 'package:walid_flutter/components/roundedpassword.dart';
-import 'package:walid_flutter/constants.dart';
-// import 'package:walid_flutter/components/textfieldCont.dart';
-// import 'package:walid_flutter/constants.dart';
-
-// import 'package:walid_flutter/constants.dart';
 import 'package:walid_flutter/screens/Login/Components/background.dart';
 import 'package:walid_flutter/screens/Login/login.dart';
+
+import '../../../constants.dart';
+
+
+
+
+
+
 
 class Body extends StatelessWidget {
   const Body({
@@ -35,6 +35,7 @@ Widget build(BuildContext context) {
         // ignore: prefer_const_literals_to_create_immutables
         children: [
 
+          
           Text(
         "LOGIN",
         
