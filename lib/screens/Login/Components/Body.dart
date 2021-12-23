@@ -1,8 +1,3 @@
-// ignore: file_names
-// ignore: file_names
-// ignore: file_names
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:walid_flutter/components/roundedbutton.dart';
@@ -14,7 +9,9 @@ import 'package:walid_flutter/constants.dart';
 
 // import 'package:walid_flutter/constants.dart';
 import 'package:walid_flutter/screens/Login/Components/background.dart';
+import 'package:walid_flutter/screens/Login/Components/have-anacount.dart';
 import 'package:walid_flutter/screens/Login/login.dart';
+import 'package:walid_flutter/screens/Signin/sign.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -32,13 +29,16 @@ Widget build(BuildContext context) {
    
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        // ignore: prefer_const_literals_to_create_immutables
+        // ignore: prefer_const_literals_to_create_immutables, duplicate_ignore
         children: [
 
+          // ignore: prefer_const_constructors
           Text(
         "LOGIN",
         
+        // ignore: prefer_const_constructors
         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
+        SizedBox(height: size.height*0.04,),
         SvgPicture.asset(
           "assets/icons/login.svg",
           width: size.width * 0.8,
@@ -62,7 +62,9 @@ Widget build(BuildContext context) {
               return LoginScreen();
             }),);
           },color: kprimaryColor,textColor: Colors.white,),
-        
+        HaveanAcc(press: (){
+           Navigator.push(context, MaterialPageRoute(builder: (context){ return SignScreen();}));
+        },login: true)
         ],
       )
     );

@@ -11,12 +11,13 @@ import '../../../constants.dart';
 class HaveanAcc extends StatelessWidget {
 
   final bool login;
-  final Function log;
+  final VoidCallback  press;
   const HaveanAcc(
     {
-    required Key key,
-    required this.login, 
-    required this.log,}
+    Key? key,
+    this.login = true, 
+    required this.press,
+    }
     
   ): super(key: key);
   @override
@@ -26,16 +27,16 @@ class HaveanAcc extends StatelessWidget {
             children: [
               // ignore: prefer_const_constructors
               Text(
-                "Don't have an Account?",
+                login?"Don't have an Account?":"Already Have an Account?",
                 // ignore: prefer_const_constructors
               style: TextStyle(fontSize: 14),),
               
               GestureDetector(
-                // ignore: avoid_print
-                onTap: (){print("salemsss");},
+              
+                onTap: press,
                 // ignore: prefer_const_constructors
                 child: Text(
-                  "Sign Up",
+                  login?"Sign Up":"Sign In",
                 // ignore: prefer_const_constructors
                 style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold,
                 color: kprimaryColor)))
